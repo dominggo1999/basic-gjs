@@ -1,0 +1,40 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "basic gjs setup",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src --ext ts,js --exec \"yarn run build && yarn run start\"",
+    "start": "gjs dist/main.js",
+    "build": "vite build",
+    "typecheck": "tsc --no-emit",
+    "generate": "gi-ts generate --all",
+    "generate:dts:standard": "gi-ts generate --all --out=./types",
+    "config": "gi-ts config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^26.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vite-plugin-replace": "^0.1.1"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
