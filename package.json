@@ -8,7 +8,7 @@
     "dev": "nodemon --watch src --ext ts,js --exec \"yarn run build && yarn run start\"",
     "start": "gjs dist/main.js",
     "build": "vite build",
-    "typecheck": "tsc --no-emit",
+    "typecheck": "tsc --noEmit",
     "generate": "gi-ts generate --all",
     "generate:dts:standard": "gi-ts generate --all --out=./types",
     "config": "gi-ts config"
